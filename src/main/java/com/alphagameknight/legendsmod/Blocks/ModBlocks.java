@@ -1,5 +1,6 @@
 package com.alphagameknight.legendsmod.Blocks;
 
+import com.alphagameknight.legendsmod.Items.ModCreativeModeTab;
 import com.alphagameknight.legendsmod.Items.ModItems;
 import com.alphagameknight.legendsmod.LegendsMod;
 import net.minecraft.world.item.BlockItem;
@@ -21,9 +22,24 @@ public class ModBlocks {
 
     // Registers the Minecron Block
     public static final RegistryObject<Block> MINECRON_BLOCK = registerBlock("minecron_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)), ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
 
-    // Registers the Block
+
+
+    // Registers the Block to the programmer-defined Creative Mode Tab
+    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
+        RegistryObject<T> toReturn =BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
+
+    // Registers the Block Item to a generic Creative Mode Tab
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(tab)));
+    }
+
+    // Registers the Block to a generic Creative Mode Tab
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn =BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

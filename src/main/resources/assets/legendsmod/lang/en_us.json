@@ -2,5 +2,7 @@
   "item.legendsmod.minecron_orb": "Minecron Orb",
   "item.legendsmod.minecron_shard": "Minecron Shard",
 
-  "block.legendsmod.minecron_block": "Minecron Block"
+  "block.legendsmod.minecron_block": "Minecron Block",
+
+  "itemGroup.legendsModTab": "Legends of Minecraft"
 }
