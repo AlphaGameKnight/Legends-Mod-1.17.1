@@ -22,8 +22,11 @@ public class ModBlocks {
 
     // Registers the Minecron Block
     public static final RegistryObject<Block> MINECRON_BLOCK = registerBlock("minecron_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)), ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()), ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
 
+    // Registers the Minecron Block
+    public static final RegistryObject<Block> MINECRON_ORE = registerBlock("minecron_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()), ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
 
 
     // Registers the Block to the programmer-defined Creative Mode Tab
