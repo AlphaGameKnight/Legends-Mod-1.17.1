@@ -1,5 +1,6 @@
 package com.alphagameknight.legendsmod;
 
+import com.alphagameknight.legendsmod.Blocks.ModBlocks;
 import com.alphagameknight.legendsmod.Items.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,6 +33,7 @@ public class LegendsMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 
