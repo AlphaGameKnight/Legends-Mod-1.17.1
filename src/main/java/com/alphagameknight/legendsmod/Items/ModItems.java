@@ -1,6 +1,7 @@
 package com.alphagameknight.legendsmod.Items;
 
 import com.alphagameknight.legendsmod.LegendsMod;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,12 @@ public class ModItems {
     // Registers the Minecron Shard item
     public static final RegistryObject<Item> MINECRON_SHARD = ITEMS.register("minecron_shard",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT)));
+
+    // Registers the Tomato food item
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT)
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+
 
     // Makes sure Minecraft knows there are items to be added
     public static void register(IEventBus eventBus) {

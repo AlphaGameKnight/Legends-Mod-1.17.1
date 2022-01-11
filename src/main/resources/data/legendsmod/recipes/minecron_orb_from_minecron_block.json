@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "legendsmod:minecron_block"
+    }
+  ],
+  "result": {
+    "item": "legendsmod:minecron_orb",
+    "count": 9
+  }
+}
