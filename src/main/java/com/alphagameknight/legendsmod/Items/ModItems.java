@@ -1,5 +1,6 @@
 package com.alphagameknight.legendsmod.Items;
 
+import com.alphagameknight.legendsmod.Items.custom.SmartBlowtorchItem;
 import com.alphagameknight.legendsmod.LegendsMod;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,6 +28,13 @@ public class ModItems {
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+
+    // Registers the Tomato food item
+    public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch",
+            () -> new SmartBlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT).durability(64)));
+
+
+
 
 
     // Makes sure Minecraft knows there are items to be added

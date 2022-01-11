@@ -1,5 +1,6 @@
 package com.alphagameknight.legendsmod.Blocks;
 
+import com.alphagameknight.legendsmod.Blocks.custom.SpeedBlock;
 import com.alphagameknight.legendsmod.Items.ModCreativeModeTab;
 import com.alphagameknight.legendsmod.Items.ModItems;
 import com.alphagameknight.legendsmod.LegendsMod;
@@ -25,9 +26,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()),
             ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
 
-    // Registers the Minecron Block
+    // Registers the Minecron Ore
     public static final RegistryObject<Block> MINECRON_ORE = registerBlock("minecron_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()),
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(12f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
+
+    // Registers the Speed Block
+    public static final RegistryObject<Block> SPEED_BLOCK = registerBlock("speed_block",
+            () -> new SpeedBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()),
             ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
 
 

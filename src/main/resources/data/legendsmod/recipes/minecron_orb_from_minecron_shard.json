@@ -1,13 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "***",
+    "*#*",
+    "***"
   ],
   "key": {
     "#": {
-      "item": "legendsmod:minecron_shard"
+      "tag": "forge:shards/minecron"
+    },
+    "*": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {

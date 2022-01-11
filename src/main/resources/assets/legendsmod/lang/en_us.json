@@ -2,9 +2,11 @@
   "item.legendsmod.minecron_orb": "Minecron Orb",
   "item.legendsmod.minecron_shard": "Minecron Shard",
   "item.legendsmod.tomato": "Tomato",
+  "item.legendsmod.smart_blow_torch": "Smart Blowtorch",
 
   "block.legendsmod.minecron_block": "Minecron Block",
   "block.legendsmod.minecron_ore": "Minecron Ore",
+  "block.legendsmod.speed_block": "Speed Block",
 
   "itemGroup.legendsModTab": "Legends of Minecraft"
 }
