@@ -4,17 +4,23 @@ import com.alphagameknight.legendsmod.Blocks.ModBlocks;
 import com.alphagameknight.legendsmod.Items.ModItems;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.Util;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
+import javax.annotation.Nullable;
+import java.util.List;
 import java.util.Map;
 
 public class SmartBlowtorchItem extends Item {
@@ -58,6 +64,20 @@ public class SmartBlowtorchItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
+    // Tooltip for the Blowtorch - has the "hold shift for more info" ability
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel,
+                                List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        if(Screen.hasShiftDown()) {
+            pTooltipComponents.add(new TranslatableComponent("tooltip.legendsmod.blowtorch"));
+        }else{
+            pTooltipComponents.add(new TranslatableComponent("tooltip.legendsmod.blowtorch_shift"));
+        }
+
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+    }
+
+    // Defines a boolean method which makes a block blowtorchable
     private boolean canBlowTorch(Block block){
         return BLOW_TOCH_ITEM_CRAFT.containsKey(block);
     }

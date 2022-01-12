@@ -4,9 +4,11 @@ import com.alphagameknight.legendsmod.Blocks.custom.SpeedBlock;
 import com.alphagameknight.legendsmod.Items.ModCreativeModeTab;
 import com.alphagameknight.legendsmod.Items.ModItems;
 import com.alphagameknight.legendsmod.LegendsMod;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -15,6 +17,8 @@ import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import javax.annotation.Nullable;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -24,7 +28,7 @@ public class ModBlocks {
     // Registers the Minecron Block
     public static final RegistryObject<Block> MINECRON_BLOCK = registerBlock("minecron_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()),
-            ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
+            "tooltip.block.legendsmod.minecron_block");
 
     // Registers the Minecron Ore
     public static final RegistryObject<Block> MINECRON_ORE = registerBlock("minecron_ore",
@@ -36,6 +40,28 @@ public class ModBlocks {
             () -> new SpeedBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()),
             ModCreativeModeTab.LEGENDS_OF_MINECRAFT);
 
+
+    // Registers the Block to a generic Creative Mode Tab
+    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, String tooltipKey){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tooltipKey);
+        return toReturn;
+    }
+
+    // Registers the Block Item
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, String tooltipKey){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT)) {
+
+            // Tooltip for Mod Blocks
+            @Override
+            public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flagIn) {
+                tooltip.add(new TranslatableComponent(tooltipKey));
+                super.appendHoverText(stack, level, tooltip, flagIn);
+            }
+        });
+
+    }
 
     // Registers the Block to the programmer-defined Creative Mode Tab
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){

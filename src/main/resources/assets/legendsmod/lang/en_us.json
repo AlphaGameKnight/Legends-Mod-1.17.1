@@ -1,12 +1,16 @@
 {
-  "item.legendsmod.minecron_orb": "Minecron Orb",
-  "item.legendsmod.minecron_shard": "Minecron Shard",
-  "item.legendsmod.tomato": "Tomato",
-  "item.legendsmod.smart_blow_torch": "Smart Blowtorch",
+  "item.legendsmod.minecron_orb": "\u00A7bMinecron Orb\u00A7r",
+  "item.legendsmod.minecron_shard": "\u00A7bMinecron Shard\u00A7r",
+  "item.legendsmod.tomato": "\u00A7bTomato\u00A7r",
+  "item.legendsmod.smart_blow_torch": "\u00A7bSmart Blowtorch\u00A7r",
 
-  "block.legendsmod.minecron_block": "Minecron Block",
-  "block.legendsmod.minecron_ore": "Minecron Ore",
-  "block.legendsmod.speed_block": "Speed Block",
+  "block.legendsmod.minecron_block": "\u00A7bMinecron Block\u00A7r",
+  "block.legendsmod.minecron_ore": "\u00A7bMinecron Ore\u00A7r",
+  "block.legendsmod.speed_block": "\u00A7bMinecronian Speed Block\u00A7r",
+
+  "tooltip.legendsmod.blowtorch_shift": "Hold \u00A76SHIFT\u00A7r for more information",
+  "tooltip.legendsmod.blowtorch": "Click a block and see if you can blow torch it into a different item!",
+  "tooltip.block.legendsmod.minecron_block": "A block that pulses with an otherworldly energy",
 
   "itemGroup.legendsModTab": "Legends of Minecraft"
 }
