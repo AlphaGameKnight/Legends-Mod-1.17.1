@@ -1,5 +1,6 @@
 package com.alphagameknight.legendsmod.Items;
 
+import com.alphagameknight.legendsmod.Items.custom.MinecronInfusedCoal;
 import com.alphagameknight.legendsmod.Items.custom.SmartBlowtorchItem;
 import com.alphagameknight.legendsmod.LegendsMod;
 import net.minecraft.world.food.FoodProperties;
@@ -29,9 +30,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
 
-    // Registers the Tomato food item
+    // Registers the Blowtorch Custom Item
     public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch",
             () -> new SmartBlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT).durability(64)));
+
+    // Registers the Blowtorch Custom Item
+    public static final RegistryObject<Item> MINECRON_INFUSED_COAL = ITEMS.register("minecron_infused_coal",
+            () -> new MinecronInfusedCoal(new Item.Properties().tab(ModCreativeModeTab.LEGENDS_OF_MINECRAFT)));
 
 
 
