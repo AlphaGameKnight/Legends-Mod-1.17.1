@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "legendsmod:minecron_block",
-    "legendsmod:minecron_ore"
+    "legendsmod:minecron_ore",
+    "legendsmod:speed_block"
   ]
 }

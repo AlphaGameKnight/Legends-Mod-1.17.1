@@ -5,6 +5,12 @@
   "item.legendsmod.smart_blow_torch": "\u00A7bSmart Blowtorch\u00A7r",
   "item.legendsmod.minecron_infused_coal": "\u00A7bMinecron-Infused Coal\u00A7r",
 
+  "item.legendsmod.minecron_sword": "\u00A7bMinecronian Sword\u00A7r",
+  "item.legendsmod.minecron_pickaxe": "\u00A7bMinecronian Pickaxe\u00A7r",
+  "item.legendsmod.minecron_axe": "\u00A7bMinecronian Axe\u00A7r",
+  "item.legendsmod.minecron_shovel": "\u00A7bMinecronian Shovel\u00A7r",
+  "item.legendsmod.minecron_hoe": "\u00A7bMinecronian Hoe\u00A7r",
+
   "block.legendsmod.minecron_block": "\u00A7bMinecron Block\u00A7r",
   "block.legendsmod.minecron_ore": "\u00A7bMinecron Ore\u00A7r",
   "block.legendsmod.speed_block": "\u00A7bMinecronian Speed Block\u00A7r",
@@ -12,6 +18,13 @@
   "tooltip.legendsmod.blowtorch_shift": "Hold \u00A76SHIFT\u00A7r for more information",
   "tooltip.legendsmod.blowtorch": "Click a block and see if you can blow torch it into a different item!",
   "tooltip.block.legendsmod.minecron_block": "A block that pulses with an otherworldly energy",
+  "tooltip.legendsmod.minecron_infused_coal_shift": "A piece of coal infused with minecron energy\nHold \u00A76SHIFT\u00A7r for more information",
+  "tooltip.legendsmod.minecron_infused_coal": "In their experimentation, Notch and Herobrine found a way to infuse the energy of the minecron shards into an ordinary piece of coal, creating a more efficient fuel source",
+  "tooltip.legendsmod.minecron_orb_shift": "An orb fashioned from minecron shards\nHold \u00A76SHIFT\u00A7r for more information",
+  "tooltip.legendsmod.minecron_orb": "Using their combined crafing powers, Notch and Herobrine were able to concentrate the energy from the minecron shards into a usable orb form",
+  "tooltip.legendsmod.minecron_shard_shift": "A raw piece of minecron that holds the essence of Minecraft\nHold \u00A76SHIFT\u00A7r for more information",
+  "tooltip.legendsmod.minecron_shard": "As the oldest and rarest substance in Minecraft, these shards were used to create weapons of great power due to the energies contained within",
 
-  "itemGroup.legendsModTab": "Legends of Minecraft"
+
+  "itemGroup.legends_mod_tab": "Legends of Minecraft"
 }
